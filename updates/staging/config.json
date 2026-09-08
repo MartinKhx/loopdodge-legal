@@ -1,0 +1,6 @@
+{
+  "schemaVersion": 1,
+  "environment": "staging",
+  "revision": "baseline-1",
+  "tuning": { "baseSpeed": 1.7, "maxSpeed": 3.6, "rampPerSec": 0.022, "gemChance": 0.3, "powerChance": 0.12 }
+}
