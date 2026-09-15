@@ -15,7 +15,7 @@
 </head>
 <body>
   <h1>Loop Dodge — Privacy Policy (iOS)</h1>
-  <p class="updated">Last updated: September 9, 2026 — applies to the upcoming Appodeal release with gameplay analytics and online content updates disabled.</p>
+  <p class="updated">Last updated: September 16, 2026 — describes the upcoming version 2.1.4 Appodeal release. Earlier released versions use Google AdMob, as noted below.</p>
 
   <p>Loop Dodge ("the app") is a free mobile game. This policy explains what
   data is collected when you play, by whom, and why. The short version: the
@@ -51,7 +51,18 @@
   complete saved progress to advertising providers.</p>
   <p>The app requests <strong>non-personalized ads</strong>. This does not eliminate
   data processing needed for contextual ad delivery, measurement and fraud prevention.
-  The app does not request Apple's tracking permission, and IDFA is unavailable without it. Apple's SKAdNetwork may be used for privacy-preserving attribution on iOS.</p>
+  Before starting the ad SDK for its first preload, version 2.1.4 requests Apple's
+  <strong>App Tracking Transparency</strong> permission when iOS allows a request and
+  no choice has been recorded. iOS may suppress the prompt when tracking is restricted
+  or requests are disabled. Declining permission prohibits tracking across other
+  companies' apps and websites, including through alternative identifiers, and keeps
+  the advertising identifier (IDFA) unavailable. Regional consent does not override
+  that choice. When both your Apple permission and applicable regional choices allow
+  it, advertising providers may use device data across apps for advertising measurement.
+  Ads stay non-personalized either way, and declining tracking does not restrict gameplay.
+  You can change permission in iOS Settings → Privacy &amp; Security → Tracking. Restart
+  the game after changing privacy permissions so old cached ads are not reused.
+  Apple's SKAdNetwork may also be used for privacy-preserving attribution.</p>
   <p>Where consent or privacy choices are required, the app uses Appodeal’s Stack Consent Manager before requesting ads. If that
   process cannot complete, ads remain unavailable and gameplay continues. Where
   offered, revisit <strong>Settings → Ad privacy options</strong> to change your
@@ -74,14 +85,17 @@
   any other payment details</strong>; Apple handles the payment and gives the
   app only a purchase confirmation. The app keeps a small local record of
   completed transaction identifiers on your device so that a purchase is
-  granted exactly once and can be restored (<strong>Restore Purchases</strong>
-  in the shop). Apple's handling of your purchase data is described in
+  not granted again when the store redelivers the same transaction.
+  <strong>Restore Purchases</strong> in the shop restores eligible permanent purchases,
+  such as Ultra Pass. Consumed gem packs are not restored as new gem grants.
+  Apple's handling of your purchase data is described in
   <a href="https://www.apple.com/legal/privacy/data/en/app-store/">App Store
   &amp; Privacy</a> and the <a href="https://www.apple.com/legal/privacy/">Apple
   Privacy Policy</a>.</p>
 
   <h2>Device permissions</h2>
-  <p>The app never requests permission to track you. It may ask for
+  <p>Version 2.1.4 requests Apple's tracking permission before the first ad preload
+  where iOS permits, as described above; declining it never limits gameplay. It may ask for
   <strong>notification</strong> permission to send an optional local reminder
   about your daily streak; the reminder is scheduled on your device and no
   server is involved. If you choose the "My Photo" skin, the photo you select
@@ -91,16 +105,21 @@
   <h2>Children</h2>
   <p>The app is intended for a general audience and is not directed to
   children under 13. We do not knowingly collect personal data from children.
-  Ad requests are always made without tracking permission and without the
-  advertising identifier, as described above.</p>
+  Ad requests are always non-personalized, and the advertising identifier is only
+  available to advertising providers if you allow Apple's tracking request, as
+  described above.</p>
 
   <h2>Data deletion</h2>
-  <p>The app has no accounts and keeps no server-side data, so there is nothing
-  for us to delete. You can clear everything from inside the app at any time
+  <p>This release has no player accounts or first-party save server. You can clear
+  your locally saved progress from inside the app at any time
   using <strong>Settings → Reset all progress</strong> (which also deletes your
   custom photo and the local error log), and uninstalling the app removes all
-  locally stored data. Purchases stay associated with your Apple Account and
-  can be restored after a reinstall. For data processed by advertising providers, use the privacy rights and contact options in their policies linked above.</p>
+  locally stored data. Eligible permanent purchases stay associated with your Apple
+  Account and can be restored after a reinstall; consumed gem packs cannot.
+  Resetting local progress does not delete store or advertising-provider records.
+  For provider data, use the privacy rights and contact options in their policies
+  linked above, or contact us for help directing a request. For records from earlier
+  gameplay-analytics testing, use the contact listed in that section above.</p>
 
   <h2>Changes</h2>
   <p>If this policy changes, the updated version will be posted at this address
