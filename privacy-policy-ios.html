@@ -15,12 +15,12 @@
 </head>
 <body>
   <h1>Loop Dodge — Privacy Policy (iOS)</h1>
-  <p class="updated">Last updated: September 19, 2026 — describes the upcoming version 2.1.4 Appodeal release. Earlier released versions use Google AdMob, as noted below.</p>
+  <p class="updated">Last updated: November 6, 2026 — describes the upcoming version 2.1.4 Unity LevelPlay release. Earlier released versions use Google AdMob, as noted below.</p>
 
   <p>Loop Dodge ("the app") is a free mobile game. This policy explains what
   data is collected when you play, by whom, and why. The short version: the
   game has no player accounts, and complete saves and photos stay on your device.
-  Gameplay analytics and online content updates are disabled in this release. The app includes <strong>optional rewarded ads</strong> mediated by Appodeal, which play only when you choose to watch one, and <strong>optional
+  Gameplay analytics and online content updates are disabled in this release. The app includes <strong>optional rewarded ads</strong> mediated by Unity LevelPlay, which play only when you choose to watch one, and <strong>optional
   in-app purchases</strong> processed by Apple.</p>
 
   <h2>Data stored on your device only</h2>
@@ -36,47 +36,14 @@
   <p>This release does not load GameAnalytics, send gameplay analytics events, fetch remote gameplay settings, or download game-content updates. There is no gameplay analytics consent prompt or setting in this release. Game updates are delivered through the app store.</p>
   <p>Disabling these features does not delete records already received during earlier testing. For questions about those records, contact <a href="mailto:martinkhch@gmail.com">martinkhch@gmail.com</a>. Advertising and purchase services described below have their own data handling.</p>
 
-  <h2>Advertising (Appodeal)</h2>
-  <p>The upcoming release uses <strong>Appodeal</strong> to mediate optional rewarded ads,
-  with BidMachine, AppLovin, Unity Ads and Liftoff Monetize (Vungle) included as advertising partners. An ad plays
-  only when you choose an offered reward, such as a revive, doubled gems, daily gems,
-  streak repair or a custom skin. There are no banner or automatic interstitial ads.
-  You can play without watching ads.</p>
-  <p>Appodeal and the participating advertising providers may process device and app
-  identifiers, your IP address and approximate region, device model, operating system,
-  language, ad views and interactions, and diagnostic information. They use this data
-  to deliver and measure ads, prevent fraud and operate their advertising services.
-  This advertising reporting is separate from the disabled gameplay analytics feature.
-  The game does not request access to precise device location or send your photo or
-  complete saved progress to advertising providers.</p>
-  <p>The app requests <strong>non-personalized ads</strong>. This does not eliminate
-  data processing needed for contextual ad delivery, measurement and fraud prevention.
-  Before starting the ad SDK for its first preload, version 2.1.4 requests Apple's
-  <strong>App Tracking Transparency</strong> permission when iOS allows a request and
-  no choice has been recorded. iOS may suppress the prompt when tracking is restricted
-  or requests are disabled. Declining permission prohibits tracking across other
-  companies' apps and websites, including through alternative identifiers, and keeps
-  the advertising identifier (IDFA) unavailable. Regional consent does not override
-  that choice. When both your Apple permission and applicable regional choices allow
-  it, advertising providers may use device data across apps for advertising measurement.
-  Ads stay non-personalized either way, and declining tracking does not restrict gameplay.
-  You can change permission in iOS Settings → Privacy &amp; Security → Tracking. Restart
-  the game after changing privacy permissions so old cached ads are not reused.
-  Apple's SKAdNetwork may also be used for privacy-preserving attribution.</p>
-  <p>Where consent or privacy choices are required, the app uses Appodeal’s Stack Consent Manager before requesting ads. If that
-  process cannot complete, ads remain unavailable and gameplay continues. Where
-  offered, revisit <strong>Settings → Ad privacy options</strong> to change your
-  choices. Ads are paused for the rest of that app session after opening these
-  options, so cached ads cannot be reused with older privacy choices. Restart the
-  app to request new ads under the updated choices.</p>
-  <p>Read the providers' policies for their data handling, retention and privacy rights:
-  <a href="https://appodeal.com/privacy-policy/">Appodeal</a>,
-  <a href="https://www.bidmachine.com/privacy-policy">BidMachine</a>,
-  <a href="https://legal.applovin.com/privacy/">AppLovin</a>,
-  <a href="https://unity.com/legal/privacy-policy">Unity</a>, and
-  <a href="https://vungle.com/privacy/">Liftoff Monetize (Vungle)</a>.
-  Earlier released versions use Google AdMob; those versions remain subject to
-  <a href="https://policies.google.com/privacy">Google’s privacy policy</a>.</p>
+  <h2>Advertising (Unity LevelPlay)</h2>
+  <p>The upcoming release uses <strong>Unity LevelPlay</strong> with <strong>Unity Ads and ironSource</strong> for optional rewarded ads. An ad plays only when you choose an offered reward: a revive, doubled gems, daily gems, streak repair or a custom skin. There are no banners or automatic interstitial ads. You can play without watching ads.</p>
+  <p>Before starting the advertising SDKs, the app asks whether you want to allow optional ads. If you decline or do not make a choice, these SDKs do not start. Your choice and its date are stored locally and expire after 180 days. Revisit <strong>Settings &rarr; Ad privacy options</strong> at any time. Changing the choice after the SDK has started disables further ad requests for that session; restart the app to use the new choice.</p>
+  <p>When you allow ads, Unity's advertising services (including LevelPlay's Ad Quality component) may process device, app and user identifiers, IP address and approximate region, device model, operating system, language, ad views, interactions, app usage times, purchase history and diagnostics. These support contextual ad delivery, measurement, service operation, ad quality and fraud prevention. This is separate from the disabled gameplay analytics feature. The game does not request precise location or send your custom photo or complete saved progress to advertising providers.</p>
+  <p>The app requests <strong>non-personalized ads</strong>, sends a negative personalization consent signal, and opts out of sale/sharing for targeted advertising. Contextual ads still require data processing. This is an in-app choice for optional contextual advertising, not an IAB TCF consent platform. You can review app tracking permissions in iOS Settings &rarr; Privacy &amp; Security &rarr; Tracking.</p>
+  <p>On iOS, the app does not request App Tracking Transparency permission for this contextual-ad flow. It respects the system permission and does not substitute another identifier to bypass an ATT denial. Apple's SKAdNetwork may be used for attribution. Changing system tracking permission invalidates cached ads until restart.</p>
+  <p>If you choose to report an ad using a provider's reporting or support feature, the provider may also receive the report and information you submit for that request.</p>
+  <p>Read the <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity Game Player and App User Privacy Policy</a> for provider data handling, retention and privacy-rights requests. Earlier released versions use Google AdMob and remain subject to <a href="https://policies.google.com/privacy">Google's privacy policy</a>.</p>
 
   <h2>In-app purchases (Apple)</h2>
   <p>The app offers optional in-app purchases — gem packs and the Ultra Pass —
@@ -95,8 +62,7 @@
   Privacy Policy</a>.</p>
 
   <h2>Device permissions</h2>
-  <p>Version 2.1.4 requests Apple's tracking permission before the first ad preload
-  where iOS permits, as described above; declining it never limits gameplay. It may ask for
+  <p>Version 2.1.4 does not request tracking permission for its contextual-ad flow. It may ask for
   <strong>notification</strong> permission to send an optional local reminder
   about your daily streak; the reminder is scheduled on your device and no
   server is involved. If you choose the "My Photo" skin, the photo you select
@@ -106,11 +72,9 @@
   <h2>Children</h2>
   <p>The app is intended for a general audience and is not directed to
   children under 13. We do not knowingly collect personal data from children.
-  Ad requests are always non-personalized, and the advertising identifier is only
-  available to advertising providers if you allow Apple's tracking request, as
-  described above.</p>
+  The app requests non-personalized ads and does not request Apple's tracking permission for this flow.</p>
 
-  <h2>Data deletion</h2>
+  <h2 id="data-deletion">Data deletion</h2>
   <p>This release has no player accounts or first-party save server. You can clear
   your locally saved progress from inside the app at any time
   using <strong>Settings → Reset all progress</strong> (which also deletes your
@@ -132,3 +96,4 @@
   <a href="support.html">Loop Dodge Support</a>.</p>
 </body>
 </html>
+
