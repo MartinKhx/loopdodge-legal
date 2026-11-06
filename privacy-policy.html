@@ -15,7 +15,7 @@
 </head>
 <body>
   <h1>Loop Dodge — Privacy Policy</h1>
-  <p class="updated">Last updated: September 19, 2026 — describes the upcoming version 2.1.4 Appodeal release. Earlier released versions use Google AdMob as noted below.</p>
+  <p class="updated">Last updated: November 7, 2026 — describes the upcoming Android version 2.1.4 Unity LevelPlay release. Earlier released versions use Google AdMob as noted below.</p>
 
   <p>Loop Dodge ("the app") is a free mobile game. This policy explains what
   data is collected when you play, by whom, and why. The short version: the
@@ -40,36 +40,13 @@
   <p>This release does not load GameAnalytics, send gameplay analytics events, fetch remote gameplay settings, or download game-content updates. There is no gameplay analytics consent prompt or setting in this release. Game updates are delivered through the app store.</p>
   <p>Disabling these features does not delete records already received during earlier testing. For questions about those records, contact <a href="mailto:martinkhch@gmail.com">martinkhch@gmail.com</a>. Advertising and purchase services described below have their own data handling.</p>
 
-  <h2>Advertising (Appodeal)</h2>
-  <p>The upcoming release uses <strong>Appodeal</strong> to mediate optional rewarded ads,
-  with BidMachine, AppLovin, Unity Ads and Liftoff Monetize (Vungle) included as advertising partners. An ad plays
-  only when you choose an offered reward, such as a revive, doubled gems, daily gems,
-  streak repair or a custom skin. There are no banner or automatic interstitial ads.
-  You can play without watching ads.</p>
-  <p>Appodeal and the participating advertising providers may process device and app
-  identifiers, your IP address and approximate region, device model, operating system,
-  language, ad views and interactions, and diagnostic information. They use this data
-  to deliver and measure ads, prevent fraud and operate their advertising services.
-  This advertising reporting is separate from the disabled gameplay analytics feature.
-  The game does not request access to precise device location or send your photo or
-  complete saved progress to advertising providers.</p>
-  <p>The app requests <strong>non-personalized ads</strong>. This does not eliminate
-  data processing needed for contextual ad delivery, measurement and fraud prevention.
-  You can reset or delete the advertising ID in your device's privacy settings.</p>
-  <p>Where consent or privacy choices are required, the app uses Appodeal’s Stack Consent Manager before requesting ads. If that
-  process cannot complete, ads remain unavailable and gameplay continues. Where
-  offered, revisit <strong>Settings → Ad privacy options</strong> to change your
-  choices. Ads are paused for the rest of that app session after opening these
-  options, so cached ads cannot be reused with older privacy choices. Restart the
-  app to request new ads under the updated choices.</p>
-  <p>Read the providers' policies for their data handling, retention and privacy rights:
-  <a href="https://appodeal.com/privacy-policy/">Appodeal</a>,
-  <a href="https://www.bidmachine.com/privacy-policy">BidMachine</a>,
-  <a href="https://legal.applovin.com/privacy/">AppLovin</a>,
-  <a href="https://unity.com/legal/privacy-policy">Unity</a>, and
-  <a href="https://vungle.com/privacy/">Liftoff Monetize (Vungle)</a>.
-  Earlier released versions use Google AdMob; those versions remain subject to
-  <a href="https://policies.google.com/privacy">Google’s privacy policy</a>.</p>
+  <h2>Advertising (Unity LevelPlay)</h2>
+  <p>The upcoming release uses <strong>Unity LevelPlay</strong> with <strong>Unity Ads and ironSource</strong> for optional rewarded ads. An ad plays only when you choose an offered reward: a revive, doubled gems, daily gems, streak repair or a custom skin. There are no banners or automatic interstitial ads. You can play without watching ads.</p>
+  <p>Opening the game does not start the advertising SDKs or display an advertising consent screen. When you choose a rewarded ad, the app first checks regional privacy requirements using <strong>InMobi CMP</strong>. Where consent is required, its choices appear before ads can load. If required permission is missing, declined, or cannot be checked, ads remain unavailable and you can keep playing. Other regions do not receive a blanket consent prompt. Revisit <strong>Settings &rarr; Ad privacy options</strong> to review regional choices or disable optional ads. Existing local opt-outs are preserved. Changing privacy choices after an advertising SDK has started prevents further ad requests for that session; restart the app to use the new choice.</p>
+  <p>The regional privacy check contacts InMobi to download the app's consent configuration and determine the applicable region from the network connection. Consent records are stored on the device and may be refreshed when required by the CMP configuration. See <a href="https://advertising.inmobi.com/privacy-policy">InMobi's privacy policy</a> for its data handling and privacy-rights information.</p>
+  <p>When you allow ads, Unity's advertising services (including LevelPlay's Ad Quality component) may collect and share device, app and user identifiers, IP address and approximate region, device model, operating system, language, ad views, ad interactions, app usage times, purchase history and diagnostics. These services use this information for ad delivery, measurement, service operation, ad quality and fraud prevention. App usage information includes app foreground/background activity used to measure retention. This is separate from the disabled gameplay analytics feature. The game does not create an advertising user account, explicitly forward purchase events to the ad SDKs, request precise location, or send your custom photo or complete saved progress to advertising providers.</p>
+  <p>The app sends default requests for <strong>non-personalized ads</strong> and an opt-out of sale/sharing for targeted advertising. The regional consent form also sends your selected privacy choices directly to the configured ad providers using IAB TCF, Google's Additional Consent and US privacy signals. Those choices can take priority over the app's default requests; the defaults are not a guarantee that accepting every purpose excludes personalization. You can review your choices or turn rewarded ads off in Settings. Contextual ads also require data processing. You can reset or delete your advertising ID in your device privacy settings.</p>
+  <p>Read the <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity Game Player and App User Privacy Policy</a> for provider data handling, retention and privacy-rights requests. Earlier released versions use Google AdMob, which processes identifiers, approximate location, ad interactions and diagnostics under <a href="https://policies.google.com/privacy">Google's privacy policy</a>.</p>
 
   <h2>In-app purchases (Google Play)</h2>
   <p>The app offers optional in-app purchases — gem packs and Ultra Pass —
@@ -90,15 +67,27 @@
   <p>The app is intended for a general audience aged 13 and over and does not
   knowingly collect personal data from children.</p>
 
-  <h2>Data deletion</h2>
+  <h2 id="data-deletion">Data deletion</h2>
   <p>This release has no player accounts or first-party save server. You can clear
   your locally saved progress from inside the app at any
   time using <strong>Settings → Reset all progress</strong> (which also deletes
   your custom photo), and uninstalling the app removes all locally stored
   progress. Resetting local progress does not delete store or advertising-provider
-  records. For provider data, use the privacy rights and contact options in their
-  policies linked above, or contact us for help directing a request. For records
-  from earlier gameplay-analytics testing, use the contact listed in that section above.</p>
+  records.</p>
+  <p>To request help deleting data associated with <strong>Loop Dodge</strong>,
+  email <a href="mailto:mxtinix@gmail.com?subject=Loop%20Dodge%20data%20deletion">mxtinix@gmail.com</a>
+  with the subject "Loop Dodge data deletion" and say which service your request
+  concerns. We can help direct the request to the provider that holds the records.
+  Do not send passwords or payment details.</p>
+  <p>For Unity advertising records, use the privacy controls available from the
+  ad's Data Privacy icon, or the request instructions in
+  <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity's policy</a>.
+  For records held by Google, use the privacy controls and contact options in
+  <a href="https://policies.google.com/privacy">Google's policy</a>.
+  Providers may verify your request and retain records required for transactions,
+  legal obligations or fraud prevention under their policies; clearing local
+  progress does not erase those records. For earlier gameplay-analytics testing,
+  use the contact listed in that section above.</p>
 
   <h2>Changes</h2>
   <p>If this policy changes, the updated version will be posted at this
