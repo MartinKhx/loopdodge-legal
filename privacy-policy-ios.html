@@ -5,17 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Loop Dodge (iOS) — Privacy Policy</title>
   <style>
-    body { max-width: 720px; margin: 40px auto; padding: 0 20px;
-           font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-           line-height: 1.6; color: #222; }
-    h1 { font-size: 28px; } h2 { font-size: 20px; margin-top: 32px; }
-    a { color: #0a7ea4; }
-    .updated { color: #777; font-size: 14px; }
+    :root { color-scheme: dark; --bg:#080e1c; --panel:#111c32; --text:#eef3ff; --muted:#b5c4de; --accent:#72e4ef; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { max-width:820px; margin:0 auto; padding:64px 28px 72px; font:16px/1.75 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; color:var(--text); background:radial-gradient(ellipse at 20% 0%,#172a49 0%,transparent 48%),var(--bg); }
+    .brand { display:flex; align-items:center; gap:12px; margin-bottom:34px; color:var(--accent); font-size:13px; font-weight:750; letter-spacing:.18em; }
+    .orbit { width:30px; height:30px; border:2px solid var(--accent); border-radius:50%; position:relative; }
+    .orbit:after { content:""; position:absolute; width:8px; height:8px; border-radius:50%; top:-3px; right:1px; background:var(--text); box-shadow:0 0 12px #72e4ef80; }
+    h1 { font-size:clamp(32px,7vw,48px); line-height:1.1; letter-spacing:-.04em; margin:0 0 18px; }
+    h2 { font-size:22px; line-height:1.35; letter-spacing:-.02em; margin:38px 0 12px; padding-top:22px; border-top:1px solid #2b3b58; }
+    p,li { color:var(--muted); } p { margin:14px 0; } strong { color:var(--text); }
+    a { color:var(--accent); text-underline-offset:4px; overflow-wrap:anywhere; }
+    a:focus-visible { outline:2px solid var(--accent); outline-offset:5px; border-radius:3px; }
+    ul { padding-left:22px; } li { margin:8px 0; }
+    .updated { font-size:13px; line-height:1.55; color:#91a5c6; max-width:660px; }
+    .summary { background:linear-gradient(140deg,#182a43,#111c32); border:1px solid #304763; border-radius:22px; padding:22px 24px; margin:28px 0; }
+    .summary h2 { margin:0 0 10px; border:0; padding:0; font-size:18px; }
+    .summary p { margin:8px 0; }
+    .summary a { display:inline-block; margin-top:6px; font-weight:650; }
+    .section-nav { display:flex; flex-wrap:wrap; gap:10px; margin:26px 0 8px; }
+    .section-nav a { padding:8px 13px; border:1px solid #304763; border-radius:24px; text-decoration:none; font-size:13px; }
+    .section-nav a:hover { background:#1d304d; }
+    @media(max-width:480px) { body { padding:32px 22px 48px; } .summary { padding:20px; } h2 { margin-top:30px; } }
+    @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
   </style>
 </head>
 <body>
-  <h1>Loop Dodge — Privacy Policy (iOS)</h1>
-  <p class="updated">Last updated: November 7, 2026 — describes the upcoming version 2.1.4 Unity LevelPlay release. Earlier released versions use Google AdMob, as noted below.</p>
+  <div class="brand"><span class="orbit" aria-hidden="true"></span> LOOP DODGE</div>
+  <main>
+  <h1>Your game. Your choices.</h1>
+  <p class="updated">Privacy policy · Updated November 11, 2026 — describes the upcoming version 2.1.4 Unity LevelPlay release. Earlier released versions use Google AdMob, as noted below.</p>
+  <section class="summary" aria-labelledby="privacy-summary">
+    <h2 id="privacy-summary">Privacy, at a glance</h2>
+    <p><strong>No player account.</strong> Your progress and custom photos stay on your device.</p>
+    <p><strong>Ads are your choice.</strong> Play without them, or watch an optional ad for a reward. Your regional privacy choices control what ad partners can use.</p>
+    <p><strong>You stay in control.</strong> Review your choices or turn rewarded ads off in the game's Settings.</p>
+    <a href="#advertising">How rewarded ads work</a>
+  </section>
+  <nav class="section-nav" aria-label="Policy sections"><a href="#advertising">Advertising</a><a href="#data-deletion">Your data</a><a href="#contact">Contact</a></nav>
+
 
   <p>Loop Dodge ("the app") is a free mobile game. This policy explains what
   data is collected when you play, by whom, and why. The short version: the
@@ -36,13 +64,13 @@
   <p>This release does not load GameAnalytics, send gameplay analytics events, fetch remote gameplay settings, or download game-content updates. There is no gameplay analytics consent prompt or setting in this release. Game updates are delivered through the app store.</p>
   <p>Disabling these features does not delete records already received during earlier testing. For questions about those records, contact <a href="mailto:martinkhch@gmail.com">martinkhch@gmail.com</a>. Advertising and purchase services described below have their own data handling.</p>
 
-  <h2>Advertising (Unity LevelPlay)</h2>
+  <h2 id="advertising">Advertising (Unity LevelPlay)</h2>
   <p>The upcoming release uses <strong>Unity LevelPlay</strong> with <strong>Unity Ads and ironSource</strong> for optional rewarded ads. An ad plays only when you choose an offered reward: a revive, doubled gems, daily gems, streak repair or a custom skin. There are no banners or automatic interstitial ads. You can play without watching ads.</p>
-  <p>Opening the game does not start the advertising SDKs or display an advertising consent screen. When you choose a rewarded ad, the app first checks regional privacy requirements using <strong>InMobi CMP</strong>. Where consent is required, its choices appear before ads can load. If required permission is missing, declined, or cannot be checked, ads remain unavailable and you can keep playing. Other regions do not receive a blanket consent prompt. Revisit <strong>Settings &rarr; Ad privacy options</strong> to review regional choices or disable optional ads. Existing local opt-outs are preserved. Changing privacy choices after an advertising SDK has started prevents further ad requests for that session; restart the app to use the new choice.</p>
+  <p>After the home screen appears, the app checks regional privacy requirements using <strong>InMobi CMP</strong>. Opening the game does not start the advertising SDKs. Where consent is required, its choices appear before ads can load. If required permission is missing, declined, or cannot be checked, ads remain unavailable and you can keep playing. Other regions do not receive a blanket consent prompt. Revisit <strong>Settings &rarr; Ad privacy options</strong> to review regional choices or disable optional ads. Existing local opt-outs are preserved. Changing privacy choices after an advertising SDK has started prevents further ad requests for that session; restart the app to use the new choice.</p>
   <p>The regional privacy check contacts InMobi to download the app's consent configuration and determine the applicable region from the network connection. Consent records are stored on the device and may be refreshed when required by the CMP configuration. See <a href="https://advertising.inmobi.com/privacy-policy">InMobi's privacy policy</a> for its data handling and privacy-rights information.</p>
   <p>When you allow ads, Unity's advertising services (including LevelPlay's Ad Quality component) may process device, app and user identifiers, IP address and approximate region, device model, operating system, language, ad views, interactions, app usage times, purchase history and diagnostics. These support contextual ad delivery, measurement, service operation, ad quality and fraud prevention. This is separate from the disabled gameplay analytics feature. The game does not request precise location or send your custom photo or complete saved progress to advertising providers.</p>
-  <p>The app sends default requests for <strong>non-personalized ads</strong> and an opt-out of sale/sharing for targeted advertising. The regional consent form also sends your selected privacy choices directly to the configured ad providers using IAB TCF, Google's Additional Consent and US privacy signals. Those choices can take priority over the app's default requests; the defaults are not a guarantee that accepting every purpose excludes personalization. You can review your choices or turn rewarded ads off in Settings. Contextual ads also require data processing. You can review app tracking permissions in iOS Settings &rarr; Privacy &amp; Security &rarr; Tracking.</p>
-  <p>When you request your first rewarded ad, after any required regional privacy choices, iOS may separately ask for <strong>App Tracking Transparency</strong> permission before the advertising SDKs start. This request concerns using the device's advertising identifier for ad measurement across other companies' apps; non-personalized advertising can still involve this kind of measurement. You can decline Apple's request and still watch available rewarded ads and earn the same rewards. The app keeps its negative personalization consent and sale/sharing opt-out signals for either answer. It respects Apple's permission and does not substitute another identifier to bypass a denial. Apple's SKAdNetwork may also be used for attribution. Changing system tracking permission invalidates cached ads until restart.</p>
+  <p>Advertising follows your <strong>regional privacy choices</strong>. Where consent is required, the consent form lets you accept, decline, or choose individual purposes and providers. Personalized ads may be used when your choices and device permissions allow them. The consent manager shares your selections with the configured ad providers using IAB TCF, Google's Additional Consent and US privacy signals. US choices to opt out of sale, sharing, or targeted advertising are also passed to both ad networks. If the required storage or vendor permission is declined, rewarded ads remain unavailable; you can continue playing without them. You can review your choices or turn rewarded ads off in Settings. Contextual ads also require data processing. You can review app tracking permissions in iOS Settings &rarr; Privacy &amp; Security &rarr; Tracking.</p>
+  <p>When you request your first rewarded ad, after any required regional privacy choices, iOS may separately ask for <strong>App Tracking Transparency</strong> permission before the advertising SDKs start. This request concerns using the device's advertising identifier for ad personalization and measurement across other companies' apps, subject to your regional privacy choices. You can decline Apple's request and still watch available rewarded ads and earn the same rewards. Regional privacy choices remain in effect for either answer. It respects Apple's permission and does not substitute another identifier to bypass a denial. Apple's SKAdNetwork may also be used for attribution. Changing system tracking permission invalidates cached ads until restart.</p>
   <p>If you choose to report an ad using a provider's reporting or support feature, the provider may also receive the report and information you submit for that request.</p>
   <p>Read the <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity Game Player and App User Privacy Policy</a> for provider data handling, retention and privacy-rights requests. Earlier released versions use Google AdMob and remain subject to <a href="https://policies.google.com/privacy">Google's privacy policy</a>.</p>
 
@@ -73,7 +101,7 @@
   <h2>Children</h2>
   <p>The app is intended for a general audience and is not directed to
   children under 13. We do not knowingly collect personal data from children.
-  The app requests non-personalized ads. If iOS restricts tracking permission, the app respects that restriction and keeps rewarded ads available.</p>
+  Ads follow regional privacy choices. If iOS restricts tracking permission, the app respects that restriction and keeps rewarded ads available.</p>
 
   <h2 id="data-deletion">Data deletion</h2>
   <p>This release has no player accounts or first-party save server. You can clear
@@ -91,9 +119,10 @@
   <p>If this policy changes, the updated version will be posted at this address
   with a new "last updated" date.</p>
 
-  <h2>Contact</h2>
+  <h2 id="contact">Contact</h2>
   <p>Questions about this policy or your data:
   <a href="mailto:mxtinix@gmail.com">mxtinix@gmail.com</a>. Help with the game:
   <a href="support.html">Loop Dodge Support</a>.</p>
+  </main>
 </body>
 </html>
